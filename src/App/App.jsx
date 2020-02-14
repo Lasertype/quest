@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to d!</h1>
+        <h1>Welcome to QuestClerk!</h1>
         <button type="button" onClick={handleOpen}>
           Begin
         </button>
