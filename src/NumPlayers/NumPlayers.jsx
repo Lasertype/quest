@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./NumPlayers.scss";
 
-const NumPlayers = ({ setNumberOfPlayers = null, setModal = {} }) => {
+const NumPlayers = ({ setNumberOfPlayers = () => {}, setModal = () => {} }) => {
   const chooseNOP = num => {
-    if (setNumberOfPlayers) {
-      setNumberOfPlayers(num);
-      setModal(false);
-    }
+    setNumberOfPlayers(num);
+    setModal(false);
   };
 
   return (
