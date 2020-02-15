@@ -1,23 +1,32 @@
 .nop-container {
-  height: 250px;
-  width: 750px;
-  background-color: hotpink;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .nop-title {
-  background-color: rebeccapurple;
-  padding: 20px;
+  padding: 25px;
+  margin: 0px;
+  line-height: 25px;
+  text-align: center;
 }
 
 .nop-number-container {
-  color: red;
   display: flex;
   justify-content: space-around;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25em;
+  height: 50px;
+  padding: 25px 0px 75px 0px;
+  position: relative;
 }
 
 .number {
   padding: 10px;
-  background-color: greenyellow;
+  background-color: grey;
   border-radius: 4px;
-  width: 50px;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
 }
