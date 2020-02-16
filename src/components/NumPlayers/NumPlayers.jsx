@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./NumPlayers.scss";
 
-const NumPlayers = ({ setNumberOfPlayers = () => {}, setModal = () => {} }) => {
+const NumPlayers = ({ setNumberOfPlayers = () => {}, setNopModal = () => {} }) => {
   const chooseNOP = num => {
     setNumberOfPlayers(num);
-    setModal(false);
+    setNopModal(false);
   };
 
   return (

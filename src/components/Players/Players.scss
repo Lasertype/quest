@@ -1,0 +1,48 @@
+.player-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.player-title {
+    padding: 25px 0px 25px 0px;
+    margin: 0px;
+    line-height: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.player-input-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25em;
+    height: 50px;
+    padding: 50px 0px 50px 0px;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .player-input {
+    padding: 10px;
+    background-color: grey;
+    border-radius: 4px;
+    width: 20%;
+  }
+
+  .input {
+      width: 100%;
+  }
+
+  .start {
+      width: 20%;
+      padding: 10px;
+      background-color: blue;
+      border-radius: 4px;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+  }
