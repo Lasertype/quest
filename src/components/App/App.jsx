@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import NumPlayers from "../NumPlayers/NumPlayers";
 import ReactModal from "react-responsive-modal";
+import ring from "../../_shared/images/One_Ring_Render.png"
 
 const App = () => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(0);
@@ -14,9 +15,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to QuestClerk!</h1>
+        <h1>QuestClerk</h1>
       </header>
-      <ReactModal classNames={{modal: "modalf"}} open={modal} onClose={handleClose} showCloseIcon={false} focusTrapped={false}>
+      <ReactModal classNames={{modal: "modal"}} open={modal} onClose={handleClose} showCloseIcon={false} focusTrapped={false}>
         <div className="modal-container">
           <NumPlayers
           setNumberOfPlayers={setNumberOfPlayers}
