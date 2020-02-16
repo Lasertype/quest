@@ -5,10 +5,11 @@
 }
 
 .nop-title {
-  padding: 25px;
+  padding: 25px 0px 25px 0px;
   margin: 0px;
   line-height: 25px;
   text-align: center;
+  width: 100%;
 }
 
 .nop-number-container {
@@ -30,4 +31,5 @@
   width: 15%;
   cursor: pointer;
   user-select: none;
+  position: relative;
 }

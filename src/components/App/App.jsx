@@ -2,14 +2,40 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import NumPlayers from "../NumPlayers/NumPlayers";
 import ReactModal from "react-responsive-modal";
-import ring from "../../_shared/images/One_Ring_Render.png"
+import Players from "../Players/Players";
 
 const App = () => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(0);
-  const [modal, setModal] = useState(true);
+  const [nopModal, setNopModal] = useState(true);
+  const [playerModal, setPlayerModal] = useState(false);
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    if (nopModal) {
+      return
+    }
+    setPlayerModal(true)
+  }, [nopModal])
+
+  useEffect(() => {
+    let newState = players;
+    for (var i = 0; i < numberOfPlayers; i++) {
+      newState.push(
+        {
+          id: i,
+          name: "",
+          threat: 0,
+          questing: 0
+        }
+      )  
+    }
+    setPlayers(players);
+    console.log('players ', players);
+  }, [numberOfPlayers])
 
   const handleClose = () => {
-    setModal(false);
+    setNopModal(false);
+    setPlayerModal(false);
   }
 
   return (
@@ -17,12 +43,21 @@ const App = () => {
       <header className="App-header">
         <h1>QuestClerk</h1>
       </header>
-      <ReactModal classNames={{modal: "modal"}} open={modal} onClose={handleClose} showCloseIcon={false} focusTrapped={false}>
+      
+      {/* NOP Modal*/}
+      <ReactModal classNames={{modal: "modal"}} open={nopModal} onClose={handleClose} showCloseIcon={false} focusTrapped={false} closeOnOverlayClick={false}>
         <div className="modal-container">
           <NumPlayers
           setNumberOfPlayers={setNumberOfPlayers}
-          setModal={setModal}
+          setNopModal={setNopModal}
         />
+        </div>
+      </ReactModal>
+
+      {/* Player Name Modal*/}
+      <ReactModal classNames={{modal: "modal"}} open={playerModal} onClose={handleClose} showCloseIcon={false} focusTrapped={false} >
+        <div className="modal-container">
+         <Players players={players}/>
         </div>
       </ReactModal>
     </div>

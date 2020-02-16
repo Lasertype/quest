@@ -21,11 +21,12 @@ h1 {
 
 .modal-container {
   position: relative;
+  height: 100%;
 }
 
 .modal {
-  width: 55%;
-  height: 35%;
+  width: 75%;
+  height: 300px;
   padding: 0;
   justify-content: center;
   position: absolute;
